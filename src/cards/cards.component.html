@@ -1,0 +1,10 @@
+<div class="container">
+ <div [style.margin]="'14px 0'">
+   <input [(ngModel)]="filterQuery" (keyup)="filterCards(filterQuery)" [style.min-width]="'50vw'">
+   <button (click)="clearFilter()">X</button>
+ </div>
+  <div class="cards">
+    <ag-card *ngFor="let card of cards" [url]="card['url']" [title]="card['itemTitle']" [subtitle]="card['created']"></ag-card>
+  </div>
+</div>
+
